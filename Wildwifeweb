@@ -1,0 +1,26 @@
+<html>
+<body style="background-color:green;">
+
+<h1>My Welcome to wildwife web Central Bulgaria</h1>
+
+<h2>Pleven</h2>
+<p style="color:red;">Wild birds in Pleven area</p>
+<a href="https://www.riew-pleven.org>RIOSV Pleven</a>
+<img src="wildducks.jpg" alt=wildducks.com" width="114" height="142">
+
+<h2>Veliko Tarnovo</h2>
+<p style="color:red;">Wild birds in Veliko Tarnovo area</p>
+<a href="https://www.riosvt.org>RIOSV Veliko Tarnovo</a>
+<img src="eagles.jpg" alt=eagles.com" width="114" height="142">
+
+<h2>Ruse</h2>
+<p style="color:red;">Wild birds in Ruse area</p>
+<img src="bulcrow.jpg" alt=bulcrow.com" width="124" height="142">
+<a href="https://www.rios-ruseorg>RIOSV Ruse</a>
+
+<h2>Gabrovo</h2>
+<p style="color:red;">Wild birds in Gabrovo area</p>
+<img src="whitestork.jpg" alt=whitestork" width="124" height="142">
+
+</body>
+</html>
