@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<table>
+  <tr>
+    <th>Animal</th>
+    <th>Insect</th>
+    <th>Bird</th>
+  </tr>
+  <tr>
+    <td><img src="wolf.jpg" alt="W3Schools.com" width="104" height="142"> Balkan wolf</td>
+    <td><img src="Ant.jpg" alt="W3Schools.com" width="104" height="142">Ant</td>
+    <td><img src="penguin.jpg" alt="W3Schools.com" width="104" height="142">penguin<</td>
+  </tr>
+  <tr>
+    <td><img src="tiger.jpg" alt="W3Schools.com" width="104" height="142">Indian tiger</td>
+    <td><img src="blackbeetle.jpg" alt="W3Schools.com" width="104" height="142">beetle</td>
+    <td><img src="magpie.jpg" alt="W3Schools.com" width="104" height="142">magpie<</td>
+  </tr>
+</table>
+
+
+</body>
+</html>
