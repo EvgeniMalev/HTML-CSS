@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Number one</h2>
+
+<ul>
+  <li>Ivana</li>
+  <li>Shampansko i salzi</li>
+</ul>  
+
+<audio controls autoplay>
+  <source src="shampanskoisalzi.ogg" type="audio/ogg">
+  <source src="shampanskoisalzi.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<h2>Number two</h2>
+
+<ul>
+  <li>Gloria</li>
+  <li>Nostalgia</li>
+</ul>  
+
+<audio controls autoplay>
+  <source src="nostalgia.ogg" type="audio/ogg">
+  <source src="nostalgia.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<h2>Number three</h2>
+
+<ul>
+  <li>Preslava</li>
+  <li>Dyavolsko zhelanye</li>
+</ul>  
+
+<audio controls autoplay>
+  <source src="preslava.ogg" type="audio/ogg">
+  <source src="preslava.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>
