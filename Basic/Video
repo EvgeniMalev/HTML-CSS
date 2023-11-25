@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Ape</h2>
+<p>Video of the first ape on the zoo</p>
+
+<video width="320" height="240" controls>
+  <source src="ape2023.mp4" type="video/mp4">
+  <source src="ape2023.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+<p>Alternative of the video in the Bulgarian website vbox7</p>
+<iframe width="420" height="315"
+src="https://www.vbox7.com/play:c5454ef69c">
+</iframe>
+
+<p>Alternative of the video in Youtube</p>
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=UKpFoYqN9-0">
+</iframe>
+
+</body>
+</html>
