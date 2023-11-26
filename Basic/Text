@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="background-color:DodgerBlue;">Blue background</h1>
+<h1 style="color:Tomato;background-color:DodgerBlue;">Red text blue background</h1>
+
+<p style="background-color:Tomato;">Тук е написан примерен текст</p>
+<h1 style="color:Tomato;background-color:DodgerBlue;border:5px solid Tomato;">Text with border</h1>
+<h1 style="background-color:rgb(216, 50, 100);"> RGB text</h1>
+
+</body>
+</html>
