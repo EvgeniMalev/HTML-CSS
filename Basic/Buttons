@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Buttons</h2>
+<p>Buttons in HTML </p>
+
+<style>
+.button {
+  background-color: #04AA6D;  // Style for the first button
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  
+  
+}
+
+.button1 {background-color: #008C2A;}
+.button1 {border-color: red;}
+.button2 {text-color: #FFFF00;}
+
+</style>
+ <button style="background-color:red; border-color:blue; color:yellow">Button0</button>
+
+<button class="button">Button1</button>
+<button class="button1">Button2</button>
+
+</body>
+</html>
