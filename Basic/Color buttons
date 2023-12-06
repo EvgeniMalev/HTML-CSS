@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>HTML DOM Events</h1>
+<h2>The onclick Event</h2>
+
+<button onclick="myFunction()">Click this button to change the color.</button>
+
+<script>
+function myFunction() {
+  document.querySelector("button").style.color = "red";
+}
+</script>
+
+</body>
+</html>
