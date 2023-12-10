@@ -1,0 +1,46 @@
+
+
+<h1 style="color:Green;background-color:DodgerBlue;">Slideshow</h1>
+
+<p style="background-color:Tomato;">This is a text added to the pictures. The slideshow contains four pictures</p>
+
+<div class="slideshow-container">
+
+// Picure 1
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="imagine1.jpg" style="width:100%">
+    <div class="text">Picture 1</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="imagine2.jpg" style="width:100%">
+    <div class="text">Pricture 2</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="imgagine3.jpg" style="width:100%">
+    <div class="text">Picture 3</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="imgagine4.jpg" style="width:100%">
+    <div class="text">Picture 4</div>
+  </div>
+
+// buttons
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
