@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 3px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: green;
+  color: #f1f;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+
+.tooltip1 .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #aaa;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.size_of_img{
+width:90px}
+</style>
+
+<body style="text-align:center;">
+
+<p>Move the mouse over the text below:</p>
+
+<div class="tooltip"><img class="size_of_img" src="https://babeltechreviews.com/wp-content/uploads/2018/07/rendition1.img_.jpg" alt="Image 1" /><span class="tooltiptext">grewon.pdf</span></div>
+
+<p>This is a  tooltip on a picture<a href="https://www.w3schools.com/css/css_tooltip.asp">GO</a></p>
+
+<div class="tooltip">
+<a href="url">Hyperlink number 1</a>
+<span class="tooltiptext">Hyperlink tooltip</span></div>
+
+</body>
+</html>
