@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>List example computer programs</h2>
+
+<ul>
+  <li>Microsoft Word</li>
+  <li>Microsoft Excel</li>
+  <li>Microsoft Power point</li>
+  <li>CCleaner</li>
+  <li>Tux paint</li>
+</ul>  
+
+<h2>List of computer games</h2>
+
+<ol>
+  <li>Counter Strike</li>
+  <li>Warcraft 3</li>
+  <li>Fifa 2008</li>
+  <li>Crysis</li>
+  <li>Call of Duty</li>
+  <li>Age of Empires</li>
+  <li>Colin McRee Rally</li>
+  <li>Flatout 2</li>
+</ol> 
+
+<h2>List of Internet browsers</h2>
+
+<ul>
+  <li>Internet Explorer</li>
+  <li>Mozilla Firefox</li>
+  <li>Opera</li>
+  <li>Safari</li>
+  <li>Google Chrome</li>
+</ul> 
+
+<dl>
+  <dt>Ut</dt>
+  <dd>Utorrent</dd>
+  <dt>ML</dt>
+  <dd>Matlab</dd>
+  <dt>FSC</dt>
+  <dd>FastStoneCapture</dd>
+</dl>
+
+</body>
+</html>
