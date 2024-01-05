@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Normal text</p>
+
+<p><b>bold text</b></p>
+
+<i><b>italic text</b></i>
+
+<p><em>emphaized text</em></p>
+
+<p><mark>marked text yellow</mark></p>
+
+<mark style="background-color: green; color: white;">
+            marked text green </mark> 
+
+<mark style="background-color: red; color: white;">
+            marked text red </mark> 
+
+<mark style="background-color: blue; color: white;">
+            marked text blue </mark> 
+            
+<p><del>deleted text</del></p>
+
+</body>
+</html>
