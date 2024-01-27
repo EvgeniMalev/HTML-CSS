@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Simple Array</h1>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+const countries = [];
+countries[0]= "Russia";
+countries[1]= "India";
+countries[2]= "China";
+countries[3]= "United states of America";
+countries[4]= "Brazil";
+countries[5]= "Italy";
+countries[6]= "Slovakia";
+countries[7]= "Kambodjia";
+countries[8]= "Nedtgherlands";
+document.getElementById("demo").innerHTML = countries;
+</script>
+
+<script>
+document.getElementById("demo1").innerHTML = countries[1];
+</script>
+
+</body>
+</html>
