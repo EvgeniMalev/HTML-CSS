@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tag Cardio: Semantic Footer</title>
+</head>
+<body>
+     <footer>
+       <p>Portal of Veliko Tarnovo</p>
+     </footer>
+
+
+     <section>
+       <h2>Tsarevets</h2>
+	   <p>Tsarevers is the main fortress in the old bulgarian capital Veliko Tarnovo</p>
+
+       <h2>Trapezitsa</h2>
+	   <p>Trapeitsa is the second most important fortress of medieval Tarnovgrad, perhaps the first palace of Asenevtsi was located there</p>
+
+       <h2>Devingrad</h2>
+	   <p>Devingrad is the third hill of the medieval Tarnovgrad, craftsmen lived on it.</p>
+	   
+	   <h2>Sveta gora</h2>
+	   <p>Sveta Gora is the fourth hill part of Tarnovgrad, a spiritual and cultural center</p>
+     </section>
+
+     <article>
+       <h2>Stefan Stambolov</h2>
+	   <p>Stefan Nikolov Stambolov is a notable Bulgarian statesman and revolutionary, as well as a journalist and poet. Apostle of the Internal Revolutionary Organization. 
+	   Participated in the preparation of the Staro Zagora and the April Uprising</p>
+     </article>
+
+	 
+</body>
+</html>	 
