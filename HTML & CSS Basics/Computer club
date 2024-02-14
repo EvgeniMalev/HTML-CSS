@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer club</title>
+</head>
+
+     <style>
+        body {
+		     text-align: center;
+			 font-size:16px;
+			 line-height:1.46;
+			 color: #585634;
+		}
+        h2 {		
+     
+
+     </style>
+        <style>
+        span:nth-child(odd) {
+            color: white;
+            background-color: red;
+        }
+        
+         article > p:first-of-type {
+            background-color: green;
+        }
+         p ~ span {
+            color: red;
+        }
+        
+         p {
+            text-decoration: underline;
+        }
+     p:nth-child(2) {
+    text-decoration: underline;
+    font-weight: bold;
+     }
+     
+        p + code {
+            text-decoration: line-through;
+        }
+
+        
+    </style>
+    
+        
+<body>
+    <article>
+        <span>The computer clubs in the town, were established in the end of 90s.</span>
+        <p>The first computer club was in the center of the town, housed in an ex-cinema</p>
+        <code>The first computer club was in the center of the town, housed in an ex-cinema</code>
+        <span>
+            In the year 2000 in the club had 30 computer which were used 24 hours.
+        </span>
+        <p>The main used programs were Internet Explorer, Mirc and ect.</p>
+        <h2>Poltava computer club 1999</h2>
+        <span>
+           Later in 2001 two new computer clubs opened doors.
+        </span>
+    </article>
+    <span>
+        In the next year on the computers were installed computer games like Counter Strike,
+		Warcraft 3, Fifa 03, Age of Empiries and ect.
+    </span>
+      <p>Later in 2007 Skype was installed in all new 50 computers in the club</p>
+</html>
