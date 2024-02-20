@@ -1,0 +1,76 @@
+body {
+    font-family: 'Playfair Display', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightgreen; /* Set background color to light green */
+}
+
+header {
+    background-color: gray; /* Set header background color to gray */
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-images {
+    display: flex;
+    align-items: center;
+}
+
+.header-images img {
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line if necessary */
+    justify-content: flex-start; /* Align buttons to the left */
+}
+
+nav ul li {
+    margin-right: 20px;
+    margin-bottom: 10px; /* Add margin between buttons */
+}
+
+.buttons-content {
+    background-color: lightblue; /* Set button background color to light blue */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    padding: 50px;
+}
+
+.container h1 {
+    text-align: center; /* Align h1 to the center */
+}
+
+.content {
+    width: 60%; /* Adjust content width */
+}
+
+.body-text {
+    margin-top: 20px; /* Add margin between paragraphs */
+}
+
+.image-container {
+    width: 40%; /* Adjust image container width */
+    padding-left: 50px; /* Add padding to the left */
+}
+
+.image-container img {
+    width: 11cm;
+    height: 8cm;
+}
+
+footer {
+    background-color: gray; /* Set footer background color to gray */
+    padding: 20px;
+    color: white;
+    text-align: center; /* Align text to the center */
+}
