@@ -1,0 +1,77 @@
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.green-text {
+    color: green;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+}
+
+.light-blue-text {
+    color: lightblue;
+    font-size: 18px;
+    font-family: 'Lora', serif;
+}
+
+.buttons-container {
+    margin-top: 20px;
+}
+
+.button {
+    background-color: green;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#myBtn {
+    width: 100px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #83B3;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+
