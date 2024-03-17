@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hybrid Automobiles</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<video autoplay muted loop id="video-bg">
+  <source src="video.mp4" type="video/mp4">
+</video>
+
+<header>
+  <h1>Хибридни автомобили <span id="green">Hybrid automobiles</span></h1>
+  <p>хибридни автомобили, които използват комбинация от електричество и течно гориво за задвижване и автомобили, които използват само електричеството като задвижване</p>
+</header>
+
+<main>
+  <div class="card">
+    <div class="card-content">
+      <h2>Сериен хибрид</h2>
+      <p>Използва два източника на енергия – ДВГ и електродвигател. Двигателят с вътрешно горене задвижва електрическия генератор, който от своя страна задвижва и управлява един от мостовете на автомобила. Генераторът едновременно задвижва автомобила и зарежда батерията на автомобила. При генериране на голямо количество енергия, тя се разпределя между генератора и батерията. Този вид хибриди, може да бъде разпознат и като удължени електрически автомобили - extended-range electric vehicles (EREVs) и range-extended electric vehicles (REEVs).</p>
+      <img class="magic" src="1.png" alt="Car 1">
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <h2>Паралелен хибрид</h2>
+      <p>Задвижват се от ДВГ или електродвигател, които са свързани към механична трансмисия. В конструктивно отношение, те са по-сложни от серийния хибрид. Мощността се разпределя между двата генератора на мощност, до достигане на техния оптимален работен регион. Важно е да се отбележи, че в тази архитектура, няма отделен генератор. Когато имаме нужда от работа на генератор, моторът работи като генератор. При този вид хибридни автомобили, нямаме режим, в който автомобилът работи само като електрически. Електродвигателят работи като спомагателен на ДВГ, за допълнителна мощност.</p>
+      <img class="magic" src="2.png" alt="Car 2">
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <h2>Серийно-паралелен хибрид</h2>
+      <p>При тази топология, електрическото превозно средство е захранвано само от двигател с вътрешно горене или електрически двигател, или  захранвана от двата източника на енергия. Разпределението на енергията между двата източника е проектирана така, че да се постигне максимална ефективност.</p>
+      <img class="magic" src="3.png" alt="Car 3">
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>Hybrid technologies 2024 Ltd.</p>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    const magicItems = document.querySelectorAll('.magic');
+    magicItems.forEach(item => {
+      item.style.opacity = 0;
+      item.style.transition = 'opacity 1s';
+      item.style.transitionDelay = Math.random() + 's';
+    });
+    magicItems.forEach(item => {
+      item.style.opacity = 1;
+    });
+
+    setTimeout(function() {
+      const video = document.getElementById('video-bg');
+      video.pause();
+      video.style.display = 'none';
+      document.body.style.overflow = 'visible';
+    }, 10000); // 10 seconds
+  });
+</script>
+
+</body>
+</html>
