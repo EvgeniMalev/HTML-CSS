@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css?family=Kode+Mono");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kode Mono", sans-serif;
+  background: #BFBDBD;
+  width: 1920px;
+  height: 868px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  border-radius: 20px;
+}
+
+.center {
+  font-family: "Kode Mono", sans-serif;
+  background: #1E3440;
+  border: 1px solid grey;
+  width: 753px;
+  height: 700px;
+  border-width: 2px;
+  position: relative;
+}
+
+h1 {
+  font-size: 40px;
+  white-space: nowrap;
+  position: absolute;
+  top: 177px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+.buttons-container {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons-container .singup,
+.buttons-container .login,
+.buttongetstarted {
+  width: 325px;
+  height: 71px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  background: #40B491;
+  border: none;
+  font-family: "Kode Mono", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.buttons-container .login:hover {
+  background: #37807c;
+}
+
+.name-container,
+.email-container,
+.password-container {
+  position: absolute;
+  width: 650px;
+  height: 46px;
+  font-size: 30px;
+  color: #808080;
+  background-color: #1E3440;
+  border: 2px solid white;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  top: 272px;
+  left: 50px;
+}
+
+.name-container input[type="text"],
+.email-container input[type="text"],
+.password-container input[type="text"] {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: inherit;
+  color: inherit;
+  margin-right: 10px;
+  font-family: "Kode Mono", sans-serif;
+}
+
+.name-container p,
+.email-container p,
+.password-container p {
+  margin-right: 10px;
+  color: green;
+}
+
+.email-container {
+  top: 368px;
+}
+
+.password-container {
+  top: 456px;
+}
+
+.buttongetstarted {
+  width: 650px;
+  height: 80px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  background: #40B491;
+  border: none;
+  font-family: "Kode Mono", sans-serif;
+}
+
+.buttongetstarted-container {
+  position: absolute;
+  bottom: 50px;
+  left: 50px; 
+  right: 50px;
+}
