@@ -1,0 +1,102 @@
+body {
+    color: black;
+}
+
+.home {
+    background-image: url("./images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.logo {
+    margin-left: 280px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.main-nav ul li {
+    margin-right: 20px;
+}
+
+h1, .goal {
+    text-align: center;
+}
+
+button {
+    width: 160px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid black;
+}
+.catalog {
+    padding: 50px 0;
+    background-color: #67A8C4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    padding: 20px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-item {
+    margin: 0 20px;
+}
+
+.flex-item img {
+    width: 300px;
+    height: auto;
+}
+
+.chairs {
+    background-color: #FFFFFF;
+    padding: 50px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-item1 {
+    flex: 0 0 70px;
+    width: 70px;
+    height: 60px;
+    margin-right: 45px;
+    text-align: center;
+}
+
+.flex-item1 img {
+    width: 100%;
+    height: auto;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+p {
+    margin-top: 10px;
+}
