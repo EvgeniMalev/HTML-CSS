@@ -1,0 +1,127 @@
+<!-- Tasks in Softuni cource 2024-->
+
+<!-- Tasks 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Cardio Last Type Combinator</title>
+    <style>
+        article > p:last-of-type {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <span>This is not red because it appears before any paragraph.</span>
+        <p>Here is a paragraph.</p>
+        <code>Here is some code.</code>
+        <span>
+            This span is red because it appears after the paragraph, even though there
+            are other nodes in between
+        </span>
+        <p>Whatever it may be, keep smiling.</p>
+        <h1>Dream big</h1>
+        <span>
+            Doesn't matter how many or what kind of nodes are in between, all spans from
+            the same parent after a paragraph are red.
+        </span>
+    </article>
+    <span>
+        This span is not red because it doesn't share a parent with a paragraph
+    </span>
+</body>
+</html>
+
+<!-- Tasks 2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Cardio Adjacent or Sibling Combinator</title>
+    <style>
+        span:last-of-type {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <span>This is not red because it appears before any paragraph.</span>
+        <p>Here is a paragraph.</p>
+        <code>Here is some code.</code>
+        <span>
+            This span is red because it appears after the paragraph, even though there
+            are other nodes in between
+        </span>
+        <p>Whatever it may be, keep smiling.</p>
+        <h1>Dream big</h1>
+        <span>
+            Doesn't matter how many or what kind of nodes are in between, all spans from
+            the same parent after a paragraph are red.
+        </span>
+    </article>
+    <span>
+        This span is not red because it doesn't share a parent with a paragraph
+    </span>
+</body>
+</html>
+
+<!-- Tasks 3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Cardio Descendant Combinator</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.46;
+            font-family: "Times New Roman", Times, serif;
+            color: #554c63;
+        }
+
+        article p:nth-child(2),
+        article code {
+            background-color: yellow;
+        }
+
+        h1 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <span>This is not red because it appears before any paragraph.</span>
+        <p>Here is a paragraph.</p>
+        <code>Here is some code.</code>
+        <span>
+            This span is red because it appears after the paragraph, even though there
+            are other nodes in between
+        </span>
+        <p>Whatever it may be, keep smiling.</p>
+        <h1>Dream big</h1>
+        <span>
+            Doesn't matter how many or what kind of nodes are in between, all spans from
+            the same parent after a paragraph are red.
+        </span>
+    </article>
+    <span>
+        This span is not red because it doesn't share a parent with a paragraph
+    </span>
+
+</html>
+
+
