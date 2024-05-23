@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CNC Detail Information</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>CNC Detail Information</h1>
+
+  <h2>Detail Capacity</h2>
+  <div id="Capacitydetail" class="bordered-section">
+    <label for="Swingoverbed">Enter Swing over bed (in mm):</label>
+    <input type="number" id="Swingoverbed" min="0.1">
+    <button onclick="enterDetail('Swingoverbed')">Enter</button>
+
+    <label for="Chuckdia">Enter Chuck diameter (in mm):</label>
+    <input type="number" id="Chuckdia" min="0.1">
+    <button onclick="enterDetail('Chuckdia')">Enter</button>
+
+    <label for="Maxturningelement">Enter Max turn element (in mm):</label>
+    <input type="number" id="Maxturningelement" min="0.1">
+    <button onclick="enterDetail('Maxturningelement')">Enter</button>
+
+    <label for="Maxturninglength">Enter Max turn length (in mm):</label>
+    <input type="number" id="Maxturninglength" min="0.1">
+    <button onclick="enterDetail('Maxturninglength')">Enter</button>
+
+    <label for="Admitcenters">Enter Admit between centers (in mm):</label>
+    <input type="number" id="Admitcenters" min="0.1">
+    <button onclick="enterDetail('Admitcenters')">Enter</button>
+  </div>
+
+  <h2>Spindle Properties</h2>
+  <div id="Spindle" class="bordered-section">
+    <label for="Spindlenose">Enter Spindle nose:</label>
+    <input type="text" id="Spindlenose">
+    <button onclick="enterDetail('Spindlenose')">Enter</button>
+
+    <label for="Holethroughspindle">Enter Hole through spindle (in mm):</label>
+    <input type="number" id="Holethroughspindle" min="1">
+    <button onclick="enterDetail('Holethroughspindle')">Enter</button>
+
+    <label for="Cuttingspeed">Enter Cutting speed (rpm):</label>
+    <input type="number" id="Cuttingspeed" min="10">
+    <button onclick="enterDetail('Cuttingspeed')">Enter</button>
+
+    <label for="Spindlemotorpower">Enter Spindle motor power (in kW):</label>
+    <input type="number" id="Spindlemotorpower" min="0.1">
+    <button onclick="enterDetail('Spindlemotorpower')">Enter</button>
+  </div>
+
+  <h2>Feed System</h2>
+  <div id="feed" class="bordered-section">
+    <label for="CrosstravelXaxis">Enter Cross travel X-axis (in mm):</label>
+    <input type="number" id="CrosstravelXaxis" min="1">
+    <button onclick="enterDetail('CrosstravelXaxis')">Enter</button>
+
+    <label for="Zaxis">Enter Z-axis (in mm):</label>
+    <input type="number" id="Zaxis" min="1">
+    <button onclick="enterDetail('Zaxis')">Enter</button>
+
+    <label for="XZaxis">Enter X/Z-axis (in mm):</label>
+    <input type="number" id="XZaxis" min="10">
+    <button onclick="enterDetail('XZaxis')">Enter</button>
+  </div>
+
+  <h2>Turret</h2>
+  <div id="syn" class="bordered-section">
+    <label for="Stations">Enter stations:</label>
+    <input type="number" id="Stations" min="1">
+    <button onclick="enterDetail('Stations')">Enter</button>
+
+    <label for="Toolshanksize">Enter Tool shank size (in mm):</label>
+    <input type="number" id="Toolshanksize" min="0.15">
+    <button onclick="enterDetail('Toolshanksize')">Enter</button>
+
+    <label for="Boringdia">Enter Boring dia (in mm):</label>
+    <input type="number" id="Boringdia" min="0.1">
+    <button onclick="enterDetail('Boringdia')">Enter</button>
+  </div>
+
+  <div id="finish" class="bordered-section">
+    <button onclick="finish()">Finish</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
