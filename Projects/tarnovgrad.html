@@ -1,72 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarnovgrad - Capital of two Bulgarias</title>
+    <title>Търновград - столица на две Българии</title>
+    <link href="https://fonts.googleapis.com/css2?family=PlayfairDisplay&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        header {
-            background: #333;
+            background-color: #409937;
             color: white;
-            padding: 15px;
-            font-size: 24px;
+            font-family: 'Playfair Display', serif;
         }
-        nav {
-            background: #555;
-            padding: 10px;
+
+        .buttons-content {
+            display: flex;
+            justify-content: center;
+            gap: 3px;
         }
-        nav a {
+
+        .buttons-pages, .buttons-pages1, .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        button {
+            background-color: #2e5faf;
             color: white;
-            text-decoration: none;
-            margin: 10px;
-            font-size: 18px;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0;
         }
-        .container {
-            padding: 20px;
-        }
-        .image-container img {
-            width: 80%;
-            max-width: 800px;
-            border-radius: 10px;
-        }
-        footer {
-            background: #333;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
+
+        button::after {
+            content: "";
+            position: absolute;
             width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        button:active::after {
+            opacity: 1;
+        }
+
+        .info-bar {
+            background-color: #49a245;
+            color: white;
+            padding: 10px;
+            text-align: center;
         }
     </style>
 </head>
+
 <body>
     <header>
-        Tarnovgrad - The Historical Capital
+        <div class="header">
+            <h1 class="header-title">Търновград</h1>
+        </div>
     </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#history">History</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+
+    <nav class="buttons-content">
+        <ul>
+            <li><a href="countrynews.html"><button>Country news</button></a></li>
+            <li><a href="economy.html"><button>Economy</button></a></li>
+            <li><a href="worldnews.html"><button>World news</button></a></li>
+            <li><a href="politics.html"><button>Politics</button></a></li>
+            <li><a href="agriculture.html"><button>Agriculture</button></a></li>
+            <li><a href="sport.html"><button>Sport</button></a></li>
+        </ul>
     </nav>
-    <div class="container">
-        <section id="home">
-            <h1>Welcome to Tarnovgrad</h1>
-            <p>Discover the medieval capital of Bulgaria, rich in history and culture.</p>
-            <div class="image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Tsarevets_Fortress.jpg" alt="Tsarevets Fortress">
-            </div>
-        </section>
+
+    <div class="info-bar">
+        <marquee behavior="scroll" direction="left">
+            Добре дошли в сайта свързан с Велико Търново и населените места в Област Велико Търново.
+        </marquee>
     </div>
+
+    <div class="buttons-pages">
+        <nav>
+            <ul>
+                <li><a href="books.html"><button>Books</button></a></li>
+                <li><a href="music.html"><button>Music</button></a></li>
+                <li><a href="nature.html"><button>Nature</button></a></li>
+                <li><a href="Love.html"><button>Love</button></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="buttons-pages1">
+        <nav>
+            <ul>
+                <li><a href="dance.html"><button>Dance</button></a></li>
+                <li><a href="cinema.html"><button>Cinema</button></a></li>
+                <li><a href="vegan.html"><button>Vegan</button></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h1>Велико Търново</h1>
+            <p>
+                Велико Търново е български град, намиращ се в централна Северна България. На негово място са съществували
+                неолитни селища, римски град, византийски град и в следващите години славянско селище и важен български
+                град през Първото Българско царство. Търново се намира на важен кръстопът, през и около него минават
+                пътища от Западните Балкани за Черно море и от Европа за Близкия изток.
+            </p>
+        </div>
+        <div class="image-container">
+            <img src="coop.jpg" style="width: 11cm; height: 8cm;">
+        </div>
+    </div>
+
     <footer>
-        &copy; 2025 EM. All rights reserved.
+        <p>&copy; 2025 Tarnovgrad v i s. All Rights Reserved</p>
     </footer>
 </body>
 </html>
