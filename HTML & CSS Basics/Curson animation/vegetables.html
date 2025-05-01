@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox with Custom Cursors</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      height: 100vh;
+    }
+
+    .box {
+      flex: 1;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .left, .center, .right {
+      border: 1px solid #ccc;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 10px;
+      margin-bottom: 5px;
+      background: #f0f0f0;
+      border-radius: 5px;
+    }
+
+    .left li:hover {
+      cursor: url('https://upload.wikimedia.org/wikipedia/commons/8/88/Red_Tomato.png'), auto;
+    }
+
+    .center li:hover {
+      cursor: url('https://upload.wikimedia.org/wikipedia/commons/e/ed/Watermelon_icon.png'), auto;
+    }
+
+    .right li:hover {
+      cursor: url('https://upload.wikimedia.org/wikipedia/commons/1/1d/Emoji_u1f347.svg'), auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box left">
+      <h3>Left (Tomato)</h3>
+      <ul>
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+      </ul>
+    </div>
+    <div class="box center">
+      <h3>Center (Watermelon)</h3>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+    <div class="box right">
+      <h3>Right (Grape)</h3>
+      <ul>
+        <li>Item X</li>
+        <li>Item Y</li>
+        <li>Item Z</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
