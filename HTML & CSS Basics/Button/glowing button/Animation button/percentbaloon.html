@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Balloon Animation</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      justify-content: center;
+      background: #f0f8ff;
+      font-family: sans-serif;
+    }
+
+    .balloon-container {
+      position: relative;
+      height: 300px;
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: 0;
+      width: 60px;
+      height: 80px;
+      background-color: #ff6f61;
+      border-radius: 30px 30px 30px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      animation: rise 5s linear forwards;
+      opacity: 0;
+    }
+
+    @keyframes rise {
+      0% {
+        bottom: 0;
+        opacity: 1;
+      }
+      100% {
+        bottom: 220px;
+        opacity: 1;
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div class="balloon-container">
+  <div class="balloon" id="balloon">0%</div>
+</div>
+
+<button onclick="launchBalloon()">Launch Balloon</button>
+
+<script>
+  function launchBalloon() {
+    const balloon = document.getElementById('balloon');
+    balloon.style.animation = 'none';
+    void balloon.offsetWidth; 
+    balloon.style.animation = 'rise 5s linear forwards';
+
+    let percent = 0;
+    balloon.textContent = "0%";
+    balloon.style.opacity = 1;
+
+    const interval = setInterval(() => {
+      percent += 1;
+      if (percent > 100) {
+        clearInterval(interval);
+        return;
+      }
+      balloon.textContent = percent + '%';
+    }, 50); 
+  }
+</script>
+
+</body>
+</html>
