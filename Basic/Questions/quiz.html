@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .quiz-box {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 200px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-box">
+    <h2>Question:</h2>
+    <p>What is the capital of France?</p>
+    <input type="text" id="answerBox" placeholder="Type your answer...">
+    <br>
+    <button onclick="checkAnswer()">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const userAnswer = document.getElementById("answerBox").value.trim().toLowerCase();
+      const correctAnswer = "paris";
+
+      const resultDiv = document.getElementById("result");
+
+      if (userAnswer === correctAnswer) {
+        resultDiv.textContent = "Correct! 🎉";
+        resultDiv.style.color = "green";
+      } else {
+        resultDiv.textContent = "Incorrect. Try again!";
+        resultDiv.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>
