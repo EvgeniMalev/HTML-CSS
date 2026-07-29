@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML5 Geolocation API Example</title>
+
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    text-align:center;
+    margin:0;
+    padding:30px;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+button{
+    background:#007BFF;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:6px;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+#output{
+    margin-top:20px;
+    text-align:left;
+    font-size:18px;
+}
+
+iframe{
+    width:100%;
+    height:350px;
+    border:none;
+    margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>HTML5 Geolocation API</h1>
+
+<button onclick="getLocation()">
+Get My Location
+</button>
+
+<div id="output"></div>
+
+<div id="map"></div>
+
+</div>
+
+<script>
+
+function getLocation(){
+
+    if(navigator.geolocation){
+
+        navigator.geolocation.getCurrentPosition(
+            showPosition,
+            showError,
+            {
+                enableHighAccuracy:true,
+                timeout:10000,
+                maximumAge:0
+            }
+        );
+
+    }else{
+
+        document.getElementById("output").innerHTML =
+        "<b>Geolocation is not supported by this browser.</b>";
+
+    }
+
+}
+
+function showPosition(position){
+
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+
+    let accuracy = position.coords.accuracy;
+    let altitude = position.coords.altitude;
+    let heading = position.coords.heading;
+    let speed = position.coords.speed;
+
+    document.getElementById("output").innerHTML =
+
+    "<h2>Location Information</h2>" +
+
+    "<b>Latitude:</b> " + lat + "<br><br>" +
+
+    "<b>Longitude:</b> " + lon + "<br><br>" +
+
+    "<b>Accuracy:</b> " + accuracy + " meters<br><br>" +
+
+    "<b>Altitude:</b> " +
+    (altitude !== null ? altitude + " meters" : "Unavailable")
+    + "<br><br>" +
+
+    "<b>Heading:</b> " +
+    (heading !== null ? heading + "°" : "Unavailable")
+    + "<br><br>" +
+
+    "<b>Speed:</b> " +
+    (speed !== null ? speed + " m/s" : "Unavailable");
+
+    document.getElementById("map").innerHTML =
+
+    `<iframe
+    src="https://maps.google.com/maps?q=${lat},${lon}&z=15&output=embed">
+    </iframe>`;
+
+}
+
+function showError(error){
+
+    switch(error.code){
+
+        case error.PERMISSION_DENIED:
+            document.getElementById("output").innerHTML =
+            "User denied the request for Geolocation.";
+            break;
+
+        case error.POSITION_UNAVAILABLE:
+            document.getElementById("output").innerHTML =
+            "Location information is unavailable.";
+            break;
+
+        case error.TIMEOUT:
+            document.getElementById("output").innerHTML =
+            "The request timed out.";
+            break;
+
+        case error.UNKNOWN_ERROR:
+            document.getElementById("output").innerHTML =
+            "An unknown error occurred.";
+            break;
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
