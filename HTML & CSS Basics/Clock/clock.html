@@ -1,0 +1,16 @@
+<script>
+function updateClock(){
+
+    const now = new Date();
+
+    const date = now.toLocaleDateString('bg-BG');
+
+    const time = now.toLocaleTimeString('bg-BG');
+
+    document.getElementById("clock").innerHTML =
+        date + "<br>" + time;
+}
+
+updateClock();
+setInterval(updateClock,1000);
+</script>
