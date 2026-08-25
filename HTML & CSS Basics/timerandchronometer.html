@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Таймер и Хронометър</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background:#f0f0f0;
+    margin-top:50px;
+}
+
+.container{
+    background:white;
+    width:400px;
+    margin:auto;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+.display{
+    font-size:40px;
+    margin:20px;
+    font-weight:bold;
+}
+
+button{
+    padding:10px 20px;
+    margin:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+input{
+    width:80px;
+    padding:5px;
+    font-size:16px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h2>Хронометър</h2>
+<div id="stopwatch" class="display">00:00:00</div>
+
+<button onclick="startStopwatch()">Старт</button>
+<button onclick="stopStopwatch()">Стоп</button>
+<button onclick="resetStopwatch()">Нулиране</button>
+
+<hr>
+
+<h2>Таймер</h2>
+
+<input type="number" id="minutes" placeholder="Минути">
+
+<div id="timer" class="display">00:00</div>
+
+<button onclick="startTimer()">Старт</button>
+<button onclick="stopTimer()">Стоп</button>
+<button onclick="resetTimer()">Нулиране</button>
+
+</div>
+
+<script>
+
+// Хронометър
+let swSeconds = 0;
+let swInterval;
+
+function updateStopwatch(){
+    let h = Math.floor(swSeconds / 3600);
+    let m = Math.floor((swSeconds % 3600) / 60);
+    let s = swSeconds % 60;
+
+    document.getElementById("stopwatch").innerHTML =
+        String(h).padStart(2,'0') + ":" +
+        String(m).padStart(2,'0') + ":" +
+        String(s).padStart(2,'0');
+
+    swSeconds++;
+}
+
+function startStopwatch(){
+    clearInterval(swInterval);
+    swInterval = setInterval(updateStopwatch,1000);
+}
+
+function stopStopwatch(){
+    clearInterval(swInterval);
+}
+
+function resetStopwatch(){
+    clearInterval(swInterval);
+    swSeconds = 0;
+    document.getElementById("stopwatch").innerHTML = "00:00:00";
+}
+
+
+// Таймер
+let timerSeconds = 0;
+let timerInterval;
+
+function startTimer(){
+
+    if(timerSeconds === 0){
+        let mins = parseInt(document.getElementById("minutes").value);
+
+        if(isNaN(mins) || mins <= 0){
+            alert("Въведете брой минути!");
+            return;
+        }
+
+        timerSeconds = mins * 60;
+    }
+
+    clearInterval(timerInterval);
+
+    timerInterval = setInterval(function(){
+
+        let m = Math.floor(timerSeconds / 60);
+        let s = timerSeconds % 60;
+
+        document.getElementById("timer").innerHTML =
+            String(m).padStart(2,'0') + ":" +
+            String(s).padStart(2,'0');
+
+        if(timerSeconds <= 0){
+            clearInterval(timerInterval);
+            alert("Времето изтече!");
+        }
+
+        timerSeconds--;
+
+    },1000);
+}
+
+function stopTimer(){
+    clearInterval(timerInterval);
+}
+
+function resetTimer(){
+    clearInterval(timerInterval);
+    timerSeconds = 0;
+    document.getElementById("timer").innerHTML = "00:00";
+}
+
+</script>
+
+</body>
+</html>
