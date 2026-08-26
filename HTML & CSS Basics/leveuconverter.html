@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертор Лев към Евро</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Конвертор Лев → Евро</h1>
+
+    <input type="number" id="bgn" placeholder="Въведете сума в лева">
+    <button onclick="convert()">Конвертирай</button>
+
+    <div id="result"></div>
+
+    <script>
+        function convert() {
+            const rate = 1.95583;
+            const bgn = parseFloat(document.getElementById("bgn").value);
+
+            if (isNaN(bgn)) {
+                document.getElementById("result").innerHTML =
+                    "Моля въведете валидна сума!";
+                return;
+            }
+
+            const eur = bgn / rate;
+
+            document.getElementById("result").innerHTML =
+                bgn.toFixed(2) + " лв. = " +
+                eur.toFixed(2) + " €";
+        }
+    </script>
+
+</body>
+</html>
