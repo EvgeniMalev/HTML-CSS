@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Конвертор Евро към Долар</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f0f4f8;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    width: 320px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+}
+
+button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Конвертор EUR → USD</h2>
+
+    <input type="number" id="euro" placeholder="Въведете сума в евро">
+
+    <button onclick="convert()">Конвертирай</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+function convert() {
+    const euro = parseFloat(document.getElementById("euro").value);
+
+    
+    const rate = 1.17;
+
+    const usd = euro * rate;
+
+    document.getElementById("result").innerHTML =
+        euro.toFixed(2) + " EUR = " + usd.toFixed(2) + " USD";
+}
+</script>
+
+</body>
+</html>
