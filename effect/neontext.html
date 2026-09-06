@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Неонов текст</title>
+
+<style>
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.neon {
+    font-size: 70px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow:
+            0 0 10px #00ff00,
+            0 0 20px #00ff00,
+            0 0 30px #00ff00;
+    }
+    to {
+        text-shadow:
+            0 0 20px #00ff00,
+            0 0 40px #00ff00,
+            0 0 60px #00ff00,
+            0 0 80px #00ff00;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="neon">Свищов</div>
