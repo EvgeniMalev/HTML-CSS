@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Брояч до събитие</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    text-align: center;
+    padding-top: 100px;
+}
+
+#countdown {
+    font-size: 40px;
+    font-weight: bold;
+    color: #2c3e50;
+    background: white;
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #34495e;
+}
+</style>
+</head>
+<body>
+
+<h1>Остават до Нова година</h1>
+
+<div id="countdown"></div>
+
+<script>
+
+const eventDate = new Date("January 1, 2027 00:00:00").getTime();
+
+const timer = setInterval(function() {
+
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24))
+                  / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60))
+                    / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60))
+                    / 1000);
+
+    document.getElementById("countdown").innerHTML =
+        days + " дни " +
+        hours + " часа " +
+        minutes + " минути " +
+        seconds + " секунди";
+
+    if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML =
+            "Събитието започна!";
+    }
+
+}, 1000);
+</script>
+
+</body>
+</html>
