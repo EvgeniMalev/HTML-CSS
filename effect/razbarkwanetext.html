@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Text Scramble</title>
+
+<style>
+body {
+    background: #101820;
+    color: #70ffd1;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 100px;
+}
+
+#display {
+    font-size: clamp(25px, 6vw, 48px);
+    font-weight: bold;
+    letter-spacing: 4px;
+    min-height: 60px;
+    text-shadow: 0 0 15px #00ffae;
+}
+
+#numbers {
+    font-size: 30px;
+    letter-spacing: 12px;
+    margin: 25px 0;
+    color: #ffffff;
+}
+
+button {
+    padding: 12px 24px;
+    background: #00b887;
+    color: #101820;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #70ffd1;
+}
+</style>
+</head>
+
+<body>
+
+<div id="display"></div>
+<div id="numbers">000000</div>
+<button onclick="startEffect()">Стартирай ефекта</button>
+
+<script>
+const finalText = "ТЪРНОВГРАД";
+const display = document.getElementById("display");
+const numbers = document.getElementById("numbers");
+
+const alphabet = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЮЯ";
+let timer;
+
+function startEffect() {
+    clearInterval(timer);
+
+    const duration = 5000;
+    const start = Date.now();
+
+    display.textContent = "";
+    numbers.textContent = "000000";
+
+    // Бързо разбъркване на буквите и цифрите
+    timer = setInterval(() => {
+        const elapsed = Date.now() - start;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Случайни числа
+        let digitString = "";
+        for (let i = 0; i < 6; i++) {
+            digitString += Math.floor(Math.random() * 10);
+        }
+        numbers.textContent = digitString;
+
+        // Постепенно разкриване на крайния текст
+        const revealed = Math.floor(
+            progress * finalText.length
+        );
+
+        let text = "";
+        for (let i = 0; i < finalText.length; i++) {
+            if (i < revealed) {
+                text += finalText[i];
+            } else {
+                text += alphabet[
+                    Math.floor(Math.random() * alphabet.length)
+                ];
+            }
+        }
+
+        display.textContent = text;
+
+        if (elapsed >= duration) {
+            clearInterval(timer);
+            display.textContent = finalText;
+            numbers.textContent = "202610";
+        }
+    }, 50);
+}
+
+startEffect();
+</script>
+
+</body>
+</html>
