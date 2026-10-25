@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Text Effect</title>
+
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #101820;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #7cffb2;
+    font-size: clamp(30px, 7vw, 70px);
+    letter-spacing: 5px;
+    text-shadow: 0 0 15px #36ff8b;
+    cursor: pointer;
+}
+
+p {
+    color: #a9c5d5;
+    letter-spacing: 3px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1 id="text">ТЪРНОВГРАД</h1>
+    <p>ИСТОРИЯ • КУЛТУРА • БЪЛГАРИЯ</p>
+</div>
+
+<script>
+const title = document.getElementById("text");
+const original = "ТЪРНОВГРАД";
+const symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%";
+
+function scrambleText() {
+    let frame = 0;
+    const duration = 1800;
+    const interval = 35;
+    const totalFrames = duration / interval;
+
+    clearInterval(window.scrambleTimer);
+
+    window.scrambleTimer = setInterval(() => {
+        let output = "";
+
+        for (let i = 0; i < original.length; i++) {
+            if (i < frame / totalFrames * original.length) {
+                output += original[i];
+            } else {
+                output += symbols[
+                    Math.floor(Math.random() * symbols.length)
+                ];
+            }
+        }
+
+        title.textContent = output;
+        frame++;
+
+        if (frame > totalFrames) {
+            clearInterval(window.scrambleTimer);
+            title.textContent = original;
+        }
+    }, interval);
+}
+
+title.addEventListener("mouseenter", scrambleText);
+title.addEventListener("click", scrambleText);
+
+scrambleText();
+</script>
+
+</body>
+</html>
