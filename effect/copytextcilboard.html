@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Копиране на текст</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        textarea {
+            width: 350px;
+            height: 120px;
+            padding: 10px;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #217dbb;
+        }
+
+        #message {
+            color: green;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Копиране на въведен текст</h2>
+
+    <textarea id="myText"
+        placeholder="Въведете текст тук..."></textarea>
+
+    <button onclick="copyText()">
+        Копирай текста
+    </button>
+
+    <p id="message"></p>
+
+    <script>
+        function copyText() {
+            let text = document.getElementById("myText");
+
+            navigator.clipboard.writeText(text.value)
+                .then(() => {
+                    document.getElementById("message").innerText =
+                        "Текстът е копиран успешно!";
+                })
+                .catch(() => {
+                    document.getElementById("message").innerText =
+                        "Грешка при копиране!";
+                });
+        }
+    </script>
+
+</body>
+</html>
